@@ -25,7 +25,7 @@ Released   : 20101122
 			<ul>
 				<li class="first current_page_item"><a href="#">Home</a></li>
 				<li><a href="#">Blog Shakil</a></li>
-				<li><a href="#">Photos</a></li>
+				<li><a href="#">Photos Shakil</a></li>
 				<li><a href="#">About</a></li>
 				<li><a href="#">Links</a></li>
 				<li><a href="#">Contact</a></li>
