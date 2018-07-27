@@ -17,7 +17,7 @@ RUN gzip -V
 RUN tar -xvzf apache-tomcat-8.5.29.tar.gz -C /opt/tomcat --strip-components=1
 RUN cd /opt/tomcat
 RUN chgrp -R tomcat /opt/tomcat
-COPY /var/lib/jenkins/workspace/ci-docker/target/java-tomcat-maven-example.war /opt/tomcat/webapps
+COPY target/java-tomcat-maven-example.war /opt/tomcat/webapps
 #RUN chown -R tomcat conf/ webapps/ work/ temp/ logs/
 #RUN update-java-alternatives -l
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
