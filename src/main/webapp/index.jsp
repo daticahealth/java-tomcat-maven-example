@@ -24,7 +24,7 @@ Released   : 20101122
 		<div id="menu">
 			<ul>
 				<li class="first current_page_item"><a href="#">Home</a></li>
-				<li><a href="#">Capstone Blogs</a></li>
+				<li><a href="#">Capstone Blogssssss</a></li>
 				<li><a href="#">Photos Blogs</a></li>
 				<li><a href="#">About</a></li>
 				<li><a href="#">Links</a></li>
