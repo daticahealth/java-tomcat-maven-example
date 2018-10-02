@@ -11,10 +11,10 @@ RUN apt-get update && \
 RUN groupadd tomcat
 RUN useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
 RUN cd /tmp
-RUN curl -O http://redrockdigimark.com/apachemirror/tomcat/tomcat-8/v8.5.32/bin/apache-tomcat-8.5.32.tar.gz
+RUN curl -O http://mirrors.wuchna.com/apachemirror/tomcat/tomcat-8/v8.5.34/bin/apache-tomcat-8.5.34.tar.gz
 RUN mkdir /opt/tomcat
 RUN gzip -V
-RUN tar -xvzf apache-tomcat-8.5.32.tar.gz -C /opt/tomcat --strip-components=1
+RUN tar -xvzf apache-tomcat-8.5.34.tar.gz -C /opt/tomcat --strip-components=1
 RUN cd /opt/tomcat
 RUN chgrp -R tomcat /opt/tomcat
 COPY target/java-tomcat-maven-example.war /opt/tomcat/webapps
