@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.example</groupId>
-  <artifactId>java-tomcat-maven-example1</artifactId>
+  <artifactId>java-tomcat-maven-example</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>Nissan Training App</name>
@@ -16,7 +16,7 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>java-tomcat-maven-example</finalName>
+    <finalName>java-tomcat-maven-example11</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
