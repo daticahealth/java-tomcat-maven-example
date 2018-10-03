@@ -5,7 +5,7 @@
   <artifactId>java-tomcat-maven-example</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>Nissan Training App</name>
+  <name>Nissan Training App for Jenkins</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
