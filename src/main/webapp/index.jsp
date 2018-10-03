@@ -15,6 +15,29 @@
    
     <!-- Custom styles for this template -->
     <link href="" rel="stylesheet">
+	<style>
+	
+	.banner-nissan {
+	  height: 400px;
+	  width: 100%;
+	  max-height: 50%;
+	  max-width: 100%;
+	  min-height: 20%;
+	  min-width: 30%;
+	  background-image: url("nissan.png");
+	  background-size: cover;
+	}
+	.banner-simpli {
+	  height: 400px;
+	  width: 100%;
+	  max-height: 100%;
+	  max-width: 100%;
+	  background-image: url("simplilearn.png");
+	  background-size: cover;
+	}
+	
+	
+	</style>
   </head>
 
   <body>
@@ -42,7 +65,7 @@
         <div class="container d-flex justify-content-between">
           <a href="#" class="navbar-brand d-flex align-items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-            <strong>Nissan</strong>
+            <strong>Nissan, Build through Jenkins</strong>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -54,16 +77,13 @@
     <main role="main">
 
       <section class="jumbotron text-center">
-        <div class="container">
-          <h1 class="jumbotron-heading">Welcome to Nissan</h1>
-          <p class="lead text-muted">NISSAN INDIA LAUNCHES THE SUNNY SPECIAL EDITION</p>
-          <p>
-            <a href="#" class="btn btn-primary my-2">Main call to action</a>
-            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-          </p>
+        <div class="container banner-nissan" >
+          
+          
         </div>
       </section>
 
+	 
       <div class="album py-5 bg-light">
         <div class="container">
 
@@ -135,18 +155,21 @@
           <div class="row">
 		
 			<section class="jumbotron text-center col-lg-12">
-			<div class="container">
-			  <h1 class="jumbotron-heading">Welcome to Simplilearn</h1>
-			  <p class="lead text-muted">Helping professionals thrive, not just survive</p>
-			  <p>
-				<a href="#" class="btn btn-primary my-2">Main call to action</a>
-				<a href="#" class="btn btn-secondary my-2">Secondary action</a>
-			  </p>
+			<div class="container banner-simpli">
+			  
+			  
 			</div>
 			</section>
 		
 		</div>
 		</div>
+		 <div class="container">
+		 
+			<div class="row text-center"><h1>Helping professionals thrive, not just survive</h1></div>
+		 
+		 
+		 </div>
+		
 		<div class="container">
 		 <div class="row">
             <div class="col-md-4">
