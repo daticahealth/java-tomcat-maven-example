@@ -1,4 +1,4 @@
-node(){
+node('testagent'){
 stage ("clone"){
 }
 stage ("build"){
