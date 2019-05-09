@@ -14,4 +14,7 @@ stage ("docker verification"){
 }
   stage ("upload docker image to dockehu/artifactory"){
 }
+  stage('Clean-workspace'){
+  cleanWs()
+  }
 }
