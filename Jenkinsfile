@@ -1,24 +1,20 @@
-node('jenkins-slave1'){
-stage ("clone"){
-  checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/csenapati12/java-tomcat-maven-example.git']]])
-}
-stage ("build"){
-  withMaven(maven:'Maven_3_3_9', mavenLocalRepo: '.repository',mavenSettingsConfig:'my-config') {
-    sh 'mvn clean install'
-  }
-}
-stage ("test-unittesting"){
-}
-stage ("Sonarqube"){
-}
-stage ("Creating docker container"){
-}
+pipeline {
 
-stage ("docker verification"){
+    agent any
+   parameters {
+  choice choices: ['DeployL1_L2_L3', 'L4', 'L6'], description: 'Please select the environment to Deploy!!!', name: 'ENV_NAME'
+  choice choices: ['HSVALIDATION_BUSINESS_SERVICE', 'HSVALIDATION_DATA_SERVICE'], description: 'Please select the application!!!', name: 'APP_NAME'
 }
-  stage ("upload docker image to dockehu/artifactory"){
-}
-  stage('Clean-workspace'){
-  cleanWs()
-  }
-}
+ stages {
+
+        stage('Code checkout') {
+             when {
+                  expression { params.ENV_NAME =='DeployL1_L2_L3'}
+                  }
+             steps {
+                    echo "helllo"
+               }
+        }
+        
+        }
+ }
