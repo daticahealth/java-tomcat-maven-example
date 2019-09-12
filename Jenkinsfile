@@ -15,6 +15,20 @@ pipeline {
                     echo "helllo"
                }
         }
+     
+     stage('Code checkout') {
+             when {
+                  expression { params.ENV_NAME =='DeployL1_L2_L3'}
+                  }
+             steps {
+                 scripts{
+                 sh '''
+                 docker build -t testimage .
+                 docker run --name=newcontainer-d -p 9898:8080 testimage
+                 '''
+                 }
+               }
+        }
         
         }
  }
