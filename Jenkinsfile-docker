@@ -1,9 +1,7 @@
 node(){
 checkout scm
     stage('Code build'){
-        sh "
-        mvn package
-        "
+        sh "mvn package"
     }
     stage('Docker build and start'){
         sh '''
