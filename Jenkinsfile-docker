@@ -5,6 +5,9 @@ checkout scm
     }
     stage('Docker build and start'){
         sh '''
+        docker stop newcontainer
+        docker rm -f newcontainer
+        docker rmi testimage
         docker build -t testimage .
         docker run --name=newcontainer -d -p 9898:8080 testimage
          '''
