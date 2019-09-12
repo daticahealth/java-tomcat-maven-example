@@ -24,7 +24,7 @@ pipeline {
                  scripts{
                  sh '''
                  docker build -t testimage .
-                 docker run --name=newcontainer-d -p 9898:8080 testimage
+                 docker run --name=newcontainer -d -p 9898:8080 testimage
                  '''
                  }
                }
