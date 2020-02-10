@@ -50,7 +50,7 @@
   <snapshotRepository>
     <id>snapshots</id>
     <!-- nexus server details for snapshots-->
-    <url>http://35.231.125.240/repository/maven-snapshots/</url>
+    <url>http://35.231.125.240:8081/repository/maven-snapshots/</url>
   </snapshotRepository>
 </distributionManagement>
 </project>
