@@ -2,35 +2,20 @@ node(){
 checkout scm    
          
          stage('compile') {         
-         sh '''
-                 mvn compile
-                
-            '''
+         echo "compile"
         }
          stage('test') {         
-         sh '''
-                 mvn test
-                
-            '''
+         echo "test"
         }
          
 stage('Maven Build') {         
-         sh '''
-                 mvn package
-                
-            '''
+        
         }
          stage('deploy to nexus') {         
-         sh '''
-                 mvn package
-                
-            '''
+         echo "deploy"
         }
          
 stage('Docker Build') {         
-         sh '''
-                 docker build -t testimage .
-                 docker run --name=newcontainer -d -p 9898:8080 testimage
-            '''
+       echo "Docker build"
         }
  }
