@@ -42,7 +42,7 @@
     </plugins>
   </build>
   <distributionManagement>
-  <repository>
+    <repository>
     <id>releases</id>
     <!-- nexus server details for release -->
     <url>http://35.184.195.6:8081/repository/maven-releases/</url>
