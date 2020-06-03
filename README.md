@@ -1,3 +1,5 @@
+[![Quality Gate Status](http://54.69.165.75:9000/api/project_badges/measure?project=com.example%3Ajava-tomcat-maven-example&metric=alert_status)](http://54.69.165.75:9000/dashboard?id=com.example%3Ajava-tomcat-maven-example)
+
 # java-tomcat-maven-example
 
 This is an example ready-to-deploy java web application built for Tomcat using Maven and webapp-runner.
