@@ -12,10 +12,10 @@ RUN groupadd tomcat
 RUN useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
 RUN cd /tmp
 #RUN curl -O http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.51/bin/apache-tomcat-8.5.51.tar.gz
-RUN curl -O https://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.55/bin/apache-tomcat-8.5.55.tar.gz
+RUN curl -O https://downloads.apache.org/tomcat/tomcat-8/v8.5.57/bin/apache-tomcat-8.5.57.tar.gz
 RUN mkdir /opt/tomcat
 RUN gzip -V
-RUN tar -xvzf apache-tomcat-8.5.55.tar.gz -C /opt/tomcat --strip-components=1
+RUN tar -xvzf apache-tomcat-8.5.57.tar.gz -C /opt/tomcat --strip-components=1
 RUN cd /opt/tomcat
 RUN chgrp -R tomcat /opt/tomcat
 ADD target/java-tomcat-maven-example.war /opt/tomcat/webapps
