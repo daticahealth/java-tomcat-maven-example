@@ -4,5 +4,5 @@
     - name: before deployment folder structure
       shell: cd /var/lib/jenkins/deploy && ls -la
     - name: Copy the playbook
-      copy: src=/var/lib/jenkins/workspace/ansible-pipleline/target/*.war dest=/home/skylab_priyadarshini/tomcat8/webapps
+      copy: src=/var/lib/jenkins/workspace/ansible-pipleline/target/myapp.war dest=/home/skylab_priyadarshini/tomcat8/webapps
     
