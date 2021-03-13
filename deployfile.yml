@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  tasks:
+    - name: before deployment folder structure
+      shell: cd /var/lib/jenkins/deploy && ls -la
+    - name: Copy the playbook
+      copy: src=/var/lib/jenkins/workspace/ansible-deploy/target/*.war dest=/home/skylab_priyadarshini/tomcat8/webapps
+    

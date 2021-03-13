@@ -1,21 +1,25 @@
-node(){
-checkout scm    
-         
-         stage('compile') {         
-         echo "compile"
+pipeline {
+    agent any   
+    stages {
+	    stage('Build and Package') {           	
+            steps {
+              withMaven(maven: 'maven-3.6.3') {           
+		 script{
+		    sh """
+		     mvn clean package
+                """
+		 }}
+            }
         }
-         stage('test') {         
-         echo "test"
+        stage('Ansible Deploy') {           	
+            steps {
+               script{              
+                sh """
+		  ansible --version
+		  ansible-playbook deployfile.yml
+                """
+	       }
+            }
         }
-         
-stage('Maven Build') {         
-        
-        }
-         stage('deploy to nexus') {         
-         echo "deploy"
-        }
-         
-stage('Docker Build') {         
-       echo "Docker build"
-        }
- }
+    }  
+}
