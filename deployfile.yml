@@ -1,5 +1,7 @@
 ---
 - hosts: localhost
+  become: true
+  become_user: root
   tasks:
     - name: before deployment folder structure
       shell: cd /var/lib/jenkins/deploy && ls -la
