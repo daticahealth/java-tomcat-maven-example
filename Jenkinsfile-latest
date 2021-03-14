@@ -16,7 +16,7 @@ pipeline{
         stage("Deploy tomcat"){
             steps{
                 script{
-                ansiblePlaybook credentialsId: 'root-credentials', playbook: 'deploytomcat.yml'
+                ansiblePlaybook credentialsId: 'root-credentials', inventory: 'ansible-hosts', playbook: 'deploytomcat.yml'
                 }
             }
         }
