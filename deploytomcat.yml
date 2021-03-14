@@ -1,0 +1,7 @@
+---
+- hosts: deploy-tomcat
+  become: true
+  become_user: root
+  tasks:
+    - name: Copy the artifact
+      copy: src=/var/lib/jenkins/workspace/ansible-pipleline/target/myapp.war dest=/home/tomcat/apache-tomcat-8.5.64/webapps
