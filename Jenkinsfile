@@ -3,12 +3,13 @@ pipeline {
     stages {
 	    stage('Build and Package') {           	
             steps {
-              withMaven(maven: 'maven-3.6.3') {           
+            //  withMaven(maven: 'maven-3.6.3') {           
 		 script{
 		    sh """
 		     mvn clean package
                 """
-		 }}
+		 }
+	    //}
             }
         }
         stage('Ansible Deploy') {           	
