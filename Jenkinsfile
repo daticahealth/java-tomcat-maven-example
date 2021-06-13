@@ -15,7 +15,8 @@ pipeline {
             //  withMaven(maven: 'maven-3.6.3') {           
 		 script{
 		    sh """
-		   //  mvn clean package
+		    ls
+		   #  mvn clean package
 		   echo  "MAster"
 		   ls -la               
 		   """
