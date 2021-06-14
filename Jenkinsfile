@@ -1,5 +1,5 @@
 pipeline {
-    node { label "$NODE" }
+    agent{ label "$NODE" }
  parameters {
   //  gitParameter branchFilter: 'origin/(.*)', defaultValue: 'master', name: 'BRANCH', type: 'PT_BRANCH'
     // parameters { string(name: 'NODE', defaultValue: 'some_node', description: '') }
