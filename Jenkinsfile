@@ -1,5 +1,5 @@
 pipeline {
-    node { label "$NODE" }} 
+    node { label "$NODE" }
  parameters {
   //  gitParameter branchFilter: 'origin/(.*)', defaultValue: 'master', name: 'BRANCH', type: 'PT_BRANCH'
     // parameters { string(name: 'NODE', defaultValue: 'some_node', description: '') }
@@ -15,7 +15,7 @@ pipeline {
         }
 	    stage('Build and Package') {           	
             steps {
-            //  withMaven(maven: 'maven-3.6.3') {           
+                    
 		 script{
 		    sh """
 		    ls
@@ -24,18 +24,9 @@ pipeline {
 		   ls -la               
 		   """
 		 }
-	    //}
+	 
             }
         }
-        stage('Ansible Deploy') {           	
-            steps {
-               script{              
-                sh """
-		  ansible --version
-		  ansible-playbook deployfile.yml
-                """
-	       }
-            }
-        }
+       
     }  
 }
