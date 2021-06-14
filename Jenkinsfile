@@ -1,7 +1,10 @@
 pipeline {
-    agent any   
+    node { label "$NODE" }} 
  parameters {
-    gitParameter branchFilter: 'origin/(.*)', defaultValue: 'master', name: 'BRANCH', type: 'PT_BRANCH'
+  //  gitParameter branchFilter: 'origin/(.*)', defaultValue: 'master', name: 'BRANCH', type: 'PT_BRANCH'
+    // parameters { string(name: 'NODE', defaultValue: 'some_node', description: '') }
+   gitParameter branchFilter: 'origin/(.*)', defaultValue: 'master', name: 'BRANCH', type: 'PT_BRANCH',string(name: 'NODE', defaultValue: 'master', description: '')
+
   }
     stages {
 	    stage('Checkout') {           	
