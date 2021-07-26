@@ -11,10 +11,10 @@ RUN apt-get update && \
 RUN groupadd tomcat
 RUN useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
 RUN cd /tmp
-RUN curl -O https://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.66/bin/apache-tomcat-8.5.66.tar.gz
+RUN curl -O https://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.69/bin/apache-tomcat-8.5.69.tar.gz
 RUN mkdir /opt/tomcat
 RUN gzip -V
-RUN tar -xvzf apache-tomcat-8.5.66.tar.gz -C /opt/tomcat --strip-components=1
+RUN tar -xvzf apache-tomcat-8.5.69.tar.gz -C /opt/tomcat --strip-components=1
 RUN cd /opt/tomcat
 RUN chgrp -R tomcat /opt/tomcat
 ADD target/myapp.war /opt/tomcat/webapps
