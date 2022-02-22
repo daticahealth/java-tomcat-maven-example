@@ -1,5 +1,8 @@
+//added new line for test pull SCM
+//added new line for test pull SCM--->22ndfeb
+//test multibranch
 # java-tomcat-maven-example
-
+#adding devops
 This is an example ready-to-deploy java web application built for Tomcat using Maven and webapp-runner.
 
 ## Running Locally
@@ -23,6 +26,7 @@ The application will be available on `http://localhost:8080`.
 
 2. Add the webapp-runner plugin into the `pom.xml`:
 
+Test merge
    ```
    <build>
      <!-- ... -->
