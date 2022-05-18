@@ -1,0 +1,26 @@
+node(){
+checkout scm
+    stage('Code build'){
+        sh "mvn package"
+    }
+    stage('Docker build and start'){
+        sh '''
+        
+        docker build -t testimage .
+        docker run --name=newcontainer -d -p 9898:8080 testimage
+         '''
+     }
+      stage('Smoke testing and result'){
+              echo "smoke testing"
+      }
+      
+       stage('Docker build and start'){
+        sh '''
+        docker stop newcontainer
+        docker rm -f newcontainer
+        docker rmi testimage
+        
+         '''
+     }
+
+}

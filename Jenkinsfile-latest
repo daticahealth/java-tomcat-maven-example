@@ -1,0 +1,25 @@
+pipeline{
+    agent any
+    stages{
+        stage("checkout"){
+            steps{
+                checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/csenapati12/java-tomcat-maven-docker.git']]]
+            }
+        }
+        stage("Build and packaging"){
+            steps{
+                sh """
+                mvn clean package
+                """
+            }
+        }
+        stage("Deploy tomcat"){
+            steps{
+                script{
+                ansiblePlaybook credentialsId: 'root-credentials', inventory: 'ansible-hosts', playbook: 'deploytomcat.yml'
+                }
+            }
+        }
+    }
+    
+}

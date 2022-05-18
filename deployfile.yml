@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  become: true
+  become_user: root
+  tasks:   
+    - name: Copy the playbook
+      copy: src=/var/lib/jenkins/workspace/ansible-pipleline/target/myapp.war dest=/home/skylab_priyadarshini/tomcat8/webapps
+    
