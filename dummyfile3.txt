@@ -3,3 +3,4 @@ kmfmekf
 kmfkmf
 newline
 newline after configuring username and email
+editing directly in remote
